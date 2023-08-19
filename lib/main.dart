@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/examples/landingpage1.dart';
 import 'package:untitled/provider/imagepathprovider.dart';
+import 'package:untitled/provider/showBorderProvider.dart';
 
 void main(){
   runApp(const MyApp());
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_)=> imagepathprovider()),
+        ChangeNotifierProvider(create: (_)=> BorderProvider()),
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
